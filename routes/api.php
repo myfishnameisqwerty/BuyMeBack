@@ -19,9 +19,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// Route::get('/tasks', 'App\Http\Controllers\TaskController@index')->name('path.index');
-// Route::post('/tasks', 'App\Http\Controllers\TaskController@index')->name('path.store');
-// Route::put('/tasks/{id}', 'App\Http\Controllers\TaskController@index')->name('path.show');
-// Route::delete('/tasks/{id}', 'App\Http\Controllers\TaskController@index')->name('path.destroy');
 
 Route::resource('tasks', TaskController::class);
